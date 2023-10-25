@@ -7,7 +7,6 @@ describe("MyNFT", function () {
   let recipient;
   const mintingLimit = 3001;
   
-
   before(async function () {
     [owner, recipient] = await ethers.getSigners();
 

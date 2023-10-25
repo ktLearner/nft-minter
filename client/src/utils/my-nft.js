@@ -8,7 +8,7 @@ const API_KEY = process.env.API_KEY;
 // Define an Alchemy Provider
 const provider = new ethers.AlchemyProvider('sepolia', API_KEY)
 
-const contract = require("../artifacts/contracts/my-nft.sol/MyNFT.json");
+const contract = require("../../../artifacts/contracts/my-nft.sol/MyNFT.json");
 
 // Create a signer
 const privateKey = process.env.PRIVATE_KEY
@@ -31,7 +31,6 @@ const mintNFT = async () => {
     console.log(`NFT Minted! Check it out at: https://sepolia.etherscan.io/tx/${nftTxn.hash}`)
 }
 
-    
 mintNFT()
 .then(() => process.exit(0))
 .catch((error) => {
