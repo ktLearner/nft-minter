@@ -16,7 +16,7 @@ by using one file then next and so on
 
 - made the market place manually although used some basic code to generate jsons automatically
 
-- tried minting multiple nfts together but got a wierd error (yeah dint ask on unidao discord)
+- tried minting multiple nfts together but got a wierd error (yeah dint ask on unidao discord) (present in nft-collection folder)
 
 - [nft collection](https://testnets.opensea.io/collection/mynft-6577) -there are few blank and few repetetions but yeah i did it. 
 
