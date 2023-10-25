@@ -1,5 +1,7 @@
-# NFT-Minter  
+# NFT-Minter
 
+## video
+[drive_link](https://drive.google.com/file/d/1ygw_7JudeUneIG2CnJqm4OL1BwXRnNR4/view?usp=sharing)
 
 ## Idea/Flow
 
