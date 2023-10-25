@@ -1,6 +1,5 @@
-// used this file for doing it manually dint make changes for automating with frontend
-
 require('dotenv').config();
+const fs = require('fs');
 
 const ethers = require('ethers');
 
@@ -10,7 +9,8 @@ const API_KEY = process.env.API_KEY;
 // Define an Alchemy Provider
 const provider = new ethers.AlchemyProvider('sepolia', API_KEY)
 
-const contract = require("../../../artifacts/contracts/my-nft.sol/MyNFT.json");
+const contract = require("../artifacts/contracts/MY_NFT.sol/MyNFT.json");
+// console.log(JSON.stringify(contract.abi));
 
 // Create a signer
 const privateKey = process.env.PRIVATE_KEY
@@ -18,13 +18,15 @@ const signer = new ethers.Wallet(privateKey, provider)
 
 // Get contract ABI and address
 const abi = contract.abi
-const contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
+const contractAddress = '0xBd449890efA68C213a9B55E61F97d98F3ded7e18'
 
 // Create a contract instance
 const myNftContract = new ethers.Contract(contractAddress, abi, signer)
+    
 
 // Get the NFT Metadata IPFS URL
-let tokenUri = "https://lavender-holy-bear-697.mypinata.cloud/ipfs/QmaGdA72EHqj5umM4XyuUksp3VYgWWhfwKJdzmsMbXAk8x/9.json";
+const tokenUri = "https://gateway.pinata.cloud/ipfs/QmX5LF4wTdSKwLiCLf1w7A6oNnkUTZRtauT3rv4CRLvqoW"
+
 
 // Call mintNFT function
 const mintNFT = async () => {
@@ -34,9 +36,9 @@ const mintNFT = async () => {
 }
 
 mintNFT()
-.then(() => process.exit(0))
-.catch((error) => {
-    console.error(error);
-    process.exit(1);
-});
+    .then(() => process.exit(0))
+    .catch((error) => {
+        console.error(error);
+        process.exit(1);
+    });
 

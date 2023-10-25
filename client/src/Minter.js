@@ -1,7 +1,10 @@
-import React, { useState } from "react";
-// import ImageUploader from "./ImageUploader";
-import pinFileToIPFS from "./utils/pinning";
+//main frontend which calls the interact page to initiate minting
+//first tried pinning on ipfs and got stuck
+
 // https://lavender-holy-bear-697.mypinata.cloud/ipfs/QmWGGyoExCG3LhJ4BqUQ7oopWMPBKGgPdR7Aeb9gLQPHUz
+
+import React, { useState } from "react";
+import pinFileToIPFS from "./utils/pinning";
 const Minter = () => {
 
   const [uploadedImage, setUploadedImage] = useState(null);
@@ -39,7 +42,7 @@ const Minter = () => {
       )}
     </div>
         <div>
-          {/* <ImageUploader onImageUpload={handleImageUpload} /> */}
+        
         </div>
 
         <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button>

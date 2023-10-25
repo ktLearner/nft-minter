@@ -1,3 +1,5 @@
+//for minting json data 
+
 require('dotenv').config();
 const axios = require('axios')
 const FormData = require('form-data')
@@ -5,7 +7,8 @@ const fs = require('fs')
 const JWT = process.env.JWT
 
 const pinJSONToIPFS = async () => {
-  
+
+
   const data = JSON.stringify({
     pinataContent: {
       name: "Pinnie NFT",

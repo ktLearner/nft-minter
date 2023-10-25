@@ -1,7 +1,17 @@
+// for pinning the image on ipfs was facing some problem with axios
+
+
 // require('dotenv').config();
+
+
+//there was some problem with axios 
+//internet suggested this but dint really work
 const axios = require('axios').default()
 const FormData = require('form-data')
+
 // const fs = require('fs')
+
+// we should use dotenv for security // using directly for testing
 const JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJiYTRjNDdjMi1iZDA3LTRmYTMtODkwZS0xYWJlODM0NTk1YTgiLCJlbWFpbCI6ImtyaXNobmEua3Q1MzlAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBpbl9wb2xpY3kiOnsicmVnaW9ucyI6W3siaWQiOiJGUkExIiwiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjF9LHsiaWQiOiJOWUMxIiwiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjF9XSwidmVyc2lvbiI6MX0sIm1mYV9lbmFibGVkIjpmYWxzZSwic3RhdHVzIjoiQUNUSVZFIn0sImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6IjNjMDkzZGJmY2Q2YzBlMmUzNTdkIiwic2NvcGVkS2V5U2VjcmV0IjoiNjYyM2RmMWFiNjJlYTgyODE2ZDA3YzJiY2RlMzA3MzYyYzNmNTEyYmYyZTIxZDkyNzZmZGQyNzYzNjRjY2MxNSIsImlhdCI6MTY5Njc2NjIzOX0.d-nRYB7OmdxL17JctjtH3ODwV-_vh9oxQ2pXcOCKuek"
 // const JWT = process.env.JWT
 const pinFileToIPFS = async (img) => {
